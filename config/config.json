@@ -1,0 +1,21 @@
+{
+    "master" : {
+          "host" : "10.12.12.12",
+          "port" : "3306",
+          "db"   : "test",
+          "username" : "xdd",
+          "password" : "123456"
+    },
+  "slave" : {
+    "host" : "10.12.12.12",
+    "port" : "3306",
+    "db"   : "test",
+    "username" : "xdd",
+    "password" : "123456"
+  },
+  "blacklist" : {
+        "mode" : 1,
+        "tables" : ["lesson","users"]
+  },
+  "runmode" : 1
+}

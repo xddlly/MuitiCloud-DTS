@@ -1,7 +1,8 @@
 package main
 
 import (
-	"MultiCloud-DTS/log"
+	"MultiCloud-DTS/configparser"
+	"fmt"
 )
 
 func main() {
@@ -9,9 +10,11 @@ func main() {
 	//var confPath = flag.String("f", "./conf/config.ini", "for conf path")
 	//initAll(*logLevel,*confPath);
 	// 全量dump数据
-	log := log.InitLog("test.log","info")
-	log.Info("this is a test")
+	//log := log.InitLog("test.log","info")
 	// 实时更新数据
+	config := configparser.InitConfig("./config/config.json",configparser.JSON);
+	master := config.Get("master")
+	fmt.Println(master.(map[string]interface{})["host"])
 }
 
 
