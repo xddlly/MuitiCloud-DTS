@@ -14,8 +14,10 @@
     "password" : "123456"
   },
   "blacklist" : {
-        "mode" : 1,
-        "tables" : ["lesson","users"]
+    "mode" : 1,
+    "tables" : ["lesson","users"]
   },
-  "runmode" : 1
+  "runtime" : {
+    "mode" : 1
+  }
 }

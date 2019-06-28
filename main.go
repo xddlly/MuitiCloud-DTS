@@ -11,10 +11,12 @@ func main() {
 	//initAll(*logLevel,*confPath);
 	// 全量dump数据
 	//log := log.InitLog("test.log","info")
-	// 实时更新数据
+	// 解析配置文件
 	config := configparser.InitConfig("./config/config.json",configparser.JSON);
+
 	master := config.Get("master")
 	fmt.Println(master.(map[string]interface{})["host"])
+	config.Save()
 }
 
 
